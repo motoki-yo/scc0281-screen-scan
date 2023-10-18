@@ -22,9 +22,9 @@ Neste projeto, está sendo desenvolvida uma aplicação com o propósito de real
 4. Uma vez informada a PCD, o programa processa o histórico daquela PCD,  registrado a partir de interações anteriores. Caso aquela pessoa tenha necessitado executar a varredura mais que uma vez até selecionar o programa correto, informar o Professor que pode ser útil ajustar o tempo daquela pessoa e permitir que o Professor ajuste naquele momento. Caso a pessoa sempre selecione o mesmo programa, oferecer a opção de seleção imediata do programa (por exemplo, iniciando a varredura por aquel icone)
 5. Durante a execução da varredura, registrar (em um arquivo de log) o histórico das interações da PCD: tempo, programas selecionados, repetições por erro de seleção e outras informações relevante para o processo descrito no item 4.
 
-** NOSSO PROGRAMA **
+**NOSSO PROGRAMA**
 
-**Lógica do programa: **
+**Lógica do programa:**
 Usei a biblioteca autoGui pois foi a melhor que encontrei que fizesse interações com a tela, como não conseguir uma forma de automatizar a posição do ponteiro para que ele acerte cada um dos aplicativos, o máximo que consegui foi que ele reconhecesse ícones que vem default, como o Explorador de Arquivos e a Lixeira, fiz uma continha usando os pixels para poder guiar o ponteiro. Os valores encontrados foram encontrados empiricamente. Uma opção para autiomzatizar seria a partir do reconhecimento de imagens. Como só possuímos dois botões, pensei em manter qualquer um dos dois pressionado por 3 segundos ou mais para funcionar como o Enter. Cada clique faz uma ação na varredura, ela não faz por tempo e sim por clique. Criei um executável para facilitar o uso pelo usuário, pois ele pode ser facilmente configurado para abrir sempre que o usuário abrir o Windows, por enquanto ele não retorna mensagens ao usuário por pop-up, as mensagens só aparecem usando o código por um IDLE.
 
 **Teclas importantes:**
