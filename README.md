@@ -64,18 +64,26 @@ O branch hotfix é basicamente um branch de correções de versões de produçã
 
 Os braches main e develop são criados por padrão e é comum o branch de desenvolvimento estar à frente em relação aos commits do branch principal, portanto após clonar o repositório mude para o branch develop e traga as alterações por garantia:
 
+```
 git checkout develop
+``` 
+```
 git pull origin develop
+```
 
 
 Após a mudança para o branch de desenvolvimento o próximo passo para começar a desenvolver uma nova feature é criar a branch da feature em questão a partir da develop. Assumindo que você já está na branch develop execute:
 
-git checkout -b feature/<new-feature>
+```
+git checkout -b feature/<new-feature
+```
 
 
 Estando nesse branch exclusivo da nova feature que será implementada você tem a liberdade de fazer commits e após encerrar a implementação pode dar push para o repo remoto. Se o branch remoto não existe ainda pode ser necessário cria-lo assim que der push, para isso:
 
+```
 git push --set-upstream origin feature/<new-feature>
+```
 
 
 Para nossos projetos será necessário abrir um PR (Pull Request) para realizar o merge do branch de feature que acabou de ser implementado e TESTADO EM DEV para o branch develop tal como merges do branch release para o branch main. 
