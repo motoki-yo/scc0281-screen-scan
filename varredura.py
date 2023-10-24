@@ -53,10 +53,10 @@ def tempo_pressionamento():
             event = keyboard.read_event()
             # Tanto faz se o usuário apertar a seta direita ou esquerda, ele verifica apenas o tempo de início. Pra ele não resetar
             #o tempo de início sempre, ele verifica se o tempo de início é None
-            if event.event_type == keyboard.KEY_DOWN and (event.name == "right" or event.name == "left") and tempo_inicio == None:
+            if event.event_type == keyboard.KEY_DOWN and (event.name == "right") and tempo_inicio == None:
                 tempo_inicio = time.time()
             # Quando a tecla deixar de ser pressionada, o tempo também é contado
-            if event.event_type == keyboard.KEY_UP and (event.name == "right" or event.name == "left"):
+            if event.event_type == keyboard.KEY_UP and (event.name == "right"):
                 tempo_fim = time.time()
                 # Se o tempo foi significante, retornar a diferença, que seria o tempo total de pressionamento
                 if tempo_inicio is not None:
@@ -155,8 +155,6 @@ def varredura_completa():
     else:
         if(keyboard.KEY_DOWN and event.name == 'right'):
             item = item + 1
-        elif(keyboard.KEY_DOWN and event.name == 'left'):
-            item = item - 1
         # caso uma tecla inválida for teclada, retonrar exit pois é um erro
         else:
             exit()
